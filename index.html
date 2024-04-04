@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+</head>
+
+<body>
+
+  <label>Program 1: Select multiple sports:</label>
+  <input type="checkbox" name="sports" value="Soccer" /> Soccer
+  <input type="checkbox" name="sports" value="Basketball" /> Basketball
+  <input type="checkbox" name="sports" value="Mountains" /> Mountains
+  <button id="sportsBtn">Display Selected Sports</button>
+  <p id="sportsResult"></p>
+
+  <label>Program 2: Choose multiple vacation destinations:</label>
+  <input type="checkbox" name="destinations" value="Beach" /> Beach
+  <input type="checkbox" name="destinations" value="Mountains" /> Mountains
+  <input type="checkbox" name="destinations" value="City" /> City
+  <button id="destinationsBtn">Display Selected Destinations</button>
+  <p id="destinationsResult"></p>
+
+  <label>Program 3: Select multiple movie genres:</label>
+  <input type="checkbox" name="genres" value="Action" /> Action
+  <input type="checkbox" name="genres" value="Comedy" /> Comedy
+  <input type="checkbox" name="genres" value="Drama" /> Drama
+  <button id="genresBtn">Display Selected Genres</button>
+  <p id="genresResult"></p>
+
+  <label>Program 4: Choose multiple items from a restaurant menu:</label>
+  <input type="checkbox" name="menu" value="Burger" /> Burger
+  <input type="checkbox" name="menu" value="Pizza" /> Pizza
+  <input type="checkbox" name="menu" value="Salad" /> Salad
+  <button id="menuBtn">Display Selected Items</button>
+  <p id="menuResult"></p>
+
+  <label>Program 5: Select multiple fruits:</label>
+  <input type="checkbox" name="fruits" value="Apple" /> Apple
+  <input type="checkbox" name="fruits" value="Banana" /> Banana
+  <input type="checkbox" name="fruits" value="Orange" /> Orange
+  <button id="fruitsBtn">Display Selected Fruits</button>
+  <p id="fruitsResult"></p>
+  
+  <script>
+    const sportsCheckBoxes = document.getElementsByName("sports")
+    const sportsBtn = document.getElementById("sportsBtn")
+    const sportsResult = document.getElementById("sportsResult")
+
+
+    sportsBtn.addEventListener("click", function () {
+      const selectedSports = [];
+
+      for (let i = 0; i < sportsCheckBoxes.length; i++) {
+        if (sportsCheckBoxes[i].checked) {
+          selectedSports.push(sportsCheckBoxes[i].value);
+        }
+      }
+
+      sportsResult.textContent = `Selected Sports: ${selectedSports.join(", ")}`
+    });
+
+    const destinationsCheckBoxes = document.getElementsByName("destinations")
+    const destinationsBtn = document.getElementById("destinationsBtn")
+    const destinationsResult = document.getElementById("destinationsResult")
+
+
+    destinationsBtn.addEventListener("click", function () {
+      const selectedDestinations = [];
+
+      for (let i = 0; i < destinationsCheckBoxes.length; i++) {
+        if (destinationsCheckBoxes[i].checked) {
+          selectedDestinations.push(destinationsCheckBoxes[i].value);
+        }
+      }
+
+      destinationsResult.textContent = `Selected Destinations: ${selectedDestinations.join(", ")}`
+    });
+
+     const genresCheckBoxes = document.getElementsByName("genres")
+      const genresBtn = document.getElementById("genresBtn")
+      const genresResult = document.getElementById("genresResult")
+
+
+    genresBtn.addEventListener("click", function () {
+        const selectedGenres= [];
+
+        for (let i = 0; i < genresCheckBoxes.length; i++) {
+          if (genresCheckBoxes[i].checked) {
+            selectedGenres.push(genresCheckBoxes[i].value);
+          }
+        }
+
+      genresResult.textContent = `Selected Genres: ${selectedGenres.join(", ")}`
+      });
+
+    const menuCheckBoxes = document.getElementsByName("menu")
+      const menuBtn = document.getElementById("menuBtn")
+      const menuResult = document.getElementById("menuResult")
+
+
+    menuBtn.addEventListener("click", function () {
+        const selectedMenu= [];
+
+        for (let i = 0; i < menuCheckBoxes.length; i++) {
+          if (menuCheckBoxes[i].checked) {
+            selectedMenu.push(menuCheckBoxes[i].value);
+          }
+        }
+
+      menuResult.textContent = `Selected Menu: ${selectedMenu.join(", ")}`
+      });
+
+    const fruitsCheckBoxes = document.getElementsByName("fruits")
+      const fruitsBtn = document.getElementById("fruitsBtn")
+      const fruitsResult = document.getElementById("fruitsResult")
+
+
+    fruitsBtn.addEventListener("click", function () {
+        const selectedFruits= [];
+
+        for (let i = 0; i < fruitsCheckBoxes.length; i++) {
+          if (fruitsCheckBoxes[i].checked) {
+            selectedFruits.push(fruitsCheckBoxes[i].value);
+          }
+        }
+
+      fruitsResult.textContent = `Selected Fruits: ${selectedFruits.join(", ")}`
+      });
+
+
+  </script>
+</body>
+
+</html>
